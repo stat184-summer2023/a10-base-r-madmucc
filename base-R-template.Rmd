@@ -24,19 +24,8 @@ tail(iris$Species,5)
 #### What is the average Sepal Length of flowers with Petal widths greater than 1? 
 
 ```{r}
-library(tidyverse)
-
-petal_large<-
-  iris %>%
-  filter(Petal.Width>1)
-
-mean(petal_large$Sepal.Length)
+mean(iris$Sepal.Length[iris$Petal.Width > 1])
 ```
-```{r}
-iris$Petal.Width>1
-```
-
-
 
 ### Question 2: For Loops
 
