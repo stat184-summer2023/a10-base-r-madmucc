@@ -104,7 +104,11 @@ Repeat parts 5A and 5B, and add
 Call the function to generate 1000 random normal numbers with mean 0 and standard deviation 1 and plot a histogram. Make the bins blue.
 
 ```{r}
-
-
-
+set.seed(184)
+library(tidyverse)
+plotNormal <- function(repetitions, mean, sd){
+  numbers <- rnorm(repetitions, mean = mean, sd = sd)
+  hist(numbers, main = sprintf("Histogram from a Normal (%s, %s) Distribution", mean, sd), xlab="Values")
+}
+plotNormal(repetitions=1000,mean=0,sd=1)
 ```
