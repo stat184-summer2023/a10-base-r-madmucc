@@ -53,7 +53,7 @@ while(T){
 
 ### Question 4: for loops in data tables
 
-#### Use a nested for loop that produces the following data frame. Name the dataframe  `Counting` and the variables (columns)  V1, V2, V3, and V4.  (There are 3 loops). 
+#### Use a nested for loop that produces the following data frame. Name the dataframe `Counting` and the variables (columns)  V1, V2, V3, and V4.  (There are 3 loops). 
 
 Hint: First identify the pattern(s) in the table before you create the for loop.
 
@@ -64,7 +64,16 @@ Hint: First identify the pattern(s) in the table before you create the for loop.
 | 3 | 4 | 5 | 6 |  
 
 ```{r}
+Counting <- data.frame(matrix(ncol=4, nrow=3))
+for(i in 1:3){
+  for(j in 1:4){
+    for(k in 1:1){
+      Counting[i, j] <- (i + j)-1
+    }}}
 
+names(Counting) <- c("V1", "V2", "V3", "V4")
+
+Counting
 ```
 
 ### Question 5: user defined functions
