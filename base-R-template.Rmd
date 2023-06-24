@@ -84,11 +84,14 @@ Counting
 
 ```{r}
 set.seed(184)
-plotNormal <- function(repitions, mean, sd){
-  
+plotNormal <- function(repetitions, mean, sd){
+  numbers <- rnorm(repetitions, mean = mean, sd = sd)
+  hist(numbers, main = "Random Normal Numbers", xlab="Values")
 }
-
-
+#5A
+plotNormal(repetitions=100,mean=2,sd=0.5)
+#5B
+plotNormal(repetitions=1000,mean=0,sd=1)
 ```
 
 ##### Extra Credit: 
